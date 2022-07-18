@@ -8,16 +8,6 @@
                 }
             }
         }
-        .btn-wsp{
-            width:40px;
-            height:40px;
-            line-height: 32px;
-            bottom:75px;
-            right:55px;
-            i{
-                font-size: 27px;
-            }
-        }
     }
 
     body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
@@ -40,7 +30,7 @@
     }
 
     .reviews .google {
-        margin: 20px 40px;
+        margin: 20px 40px !important;
         .dmlKKH {
             flex-wrap: wrap;
         }
