@@ -20,48 +20,354 @@
     </head>
     <body>
         <header>
+          <!--Cabecera-->
+          <a name="home"></a>
           <section class="home">
+            <!--Barra de Navegacion-->
             <nav class="navbar navbar-expand-lg bg-light mt-2">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#"><img class="img-fluid" src="assets/logoMahaloTexto.png" alt="Logo Mahalo" width="220px">
-                </a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav">
-                      <li class="nav-item dropdown sub">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                      </li>
-                      <li class="nav-item dropdown sub">
-                        <a class="nav-link" href="#">Reservas</a>
-                      </li>
-                      <li class="nav-item dropdown sub">
-                        <a class="nav-link" href="#">Zona Turística</a>
-                      </li>
-                      <li class="nav-item dropdown sub">
-                        <a class="nav-link">Contacto</a>
-                      </li>
-                    </ul>
+              <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="img-fluid" src="assets/logoMahalo.png" alt="Logo Mahalo" width="40"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown sub">
+                      <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown sub">
+                      <a class="nav-link" href="#zonaTuristica">Zona Turística</a>
+                    </li>
+                    <li class="nav-item dropdown sub">
+                      <a class="nav-link" href="#cabana">Cabañas</a>
+                    </li>
+                    <li class="nav-item dropdown sub">
+                      <a class="nav-link" href="#reserva">Reservas</a>
+                    </li>
+                    <li class="nav-item dropdown sub">
+                      <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+            <!--Fondo Cabecera-->
+            <section class="fondo">
+              <img src="assets/fondo3.jpg" alt="">
+            </section>
+            <div class="capa"></div>
+            <section class="slogan">
+              <span class="entranceSlogan" id="cabanas">Cabanas</span>
+              <span class="entranceSlogan" id="mahalo">Mahalo</span>
+            </section>
+          </section>
+          <a href="https://api.whatsapp.com/send?phone=5493546503763" class="btn-wsp" target="_blank">
+            <i class="bi bi-whatsapp icono"></i>
+          </a>
+        </header>
+        <!--Contenido de la Pagina-->
+        <main>
+          <section class="bienvenido">
+            <h1 class="titulo">Benvenido!</h1>
+            <p class="parrafo">Encontrá Cabañas Mahalo en Villa Rumipal. Vení a conocer el Paraíso. Emplazado en un impresionante  escenario natural, Cabañas Mahalo los invita a una experiencia inolvidable, a compartir la armonía   del lugar y desconectarse de la rutina y el estrés, a disfrutar de una estadía tranquila y acogedora  junto a atardeceres fascinantes… Anímate a sentirlo.</p>
+          </section>
+          <a name="zonaTuristica"></a>
+          <section class="zonaTuristica">
+            <!--Zona Turistica-->
+            <h1 class="titulo">Zona Turística</h1>
+            <p class="parrafo">Villa Rumipal. Asentada sobre la cuenca hídrica más importante de la provincia de Córdoba, se encuentra ubicada en el corazón del Valle de Calamuchita a la vera de su principal corredor turístico. Rodeada de lagos, sierras y ríos, conjuga múltiples actividades y vistas panorámicas es el marco ideal para disfrutar del sol, la pesca, deportes náuticos y deslumbrarse con atardeceres irrepetibles. Villa Rumipal los espera todo el año, cada estación tiene su encanto, cada paisaje guarda una postal, cada rincón conserva su magia y sus costumbres.</p>
+            <div class="videos">
+              <!--Video Rumipal 1-->
+              <iframe src="https://www.youtube.com/embed/qpOVPRcr9bc" title="YouTubevideo player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!--Video Rumipal 1-->
+              <iframe src="https://www.youtube.com/embed/I-DwhirXyMk" title="YouTubvideo player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-mediagyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <!--Galeria Rumipal-->
+            <div class="postales">
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="assets/postal1.jpg" alt="Atardecer en el Lago"></a>
+                </div>
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="assets/postal2.jpg" alt="Lago y Sol"></a>
+                </div>
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="assets/postal3.jpg" alt="El Torreon"></a>
+                </div>
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="assets/postal4.jpg" alt="Zona Céntrica"></a>
+                </div>
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img src="assets/postal5.jpg" alt="Lago"></a>
+                </div>
+                <div class="postal">
+                  <a data-bs-toggle="modal" data-bs-target="#staticBackdrop" href="#postal6"><img src="assets/fondo3.jpg" alt="Náutica"></a>
+                </div>
+            </div>
+            <!-- Modal Postales-->
+            <div class="modal fade p-0" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-body modalPostales">
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <!-- Carrusel Postales-->
+                      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                        </div>
+                        <div class="carousel-inner">
+                          <div class="carousel-item active" name="postal1">
+                            <img src="assets/postal1.jpg" alt="Atardecer en el Lago" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/postal2.jpg" alt="Lago y Sol" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/postal3.jpg" alt="El Torreon" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/postal4.jpg" alt="Zona Céntrica" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="assets/postal5.jpg" alt="Lago" class="d-block w-100">
+                          </div>
+                          <div class="carousel-item" name="postal6">
+                            <img src="assets/fondo3.jpg" alt="Náutica" class="d-block w-100">
+                          </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </nav>
-              <section class="fondo">
-                <img src="assets/fondo3.jpg" alt="">
-
-              </section>
+            </div>
           </section>
-        </header>
-        <main>
-          <h1>CABAÑAS MAHALO</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi repudiandae consequuntur tempore aliquam consequatur, optio enim exercitationem magni nemo. Quam omnis eos corporis non ut reiciendis culpa fuga ipsa et, voluptates praesentium at, voluptatibus veritatis, dolore fugit perspiciatis. Harum dolore sunt, neque officiis ducimus, eum delectus impedit quaerat voluptate explicabo iste necessitatibus suscipit quibusdam deleniti reprehenderit odio sapiente animi vero beatae quisquam inventore! Fugit soluta quo veniam autem suscipit totam dolore possimus, rerum laboriosam architecto expedita ad nemo minima facere quidem sapiente recusandae optio, labore atque earum perspiciatis. Cumque rem enim eum molestiae laboriosam! Odit nam at libero explicabo eius vel labore facere asperiores accusantium a eveniet, temporibus iure aliquam. Dolorem incidunt ipsa nisi sit laboriosam repellat quis saepe libero!</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem fuga impedit quas voluptatem possimus soluta amet, vel doloremque earum enim odio eos labore cum aperiam voluptates harum commodi dolorum natus accusantium quae exercitationem. Fugiat eos, exercitationem, fugit esse, eveniet doloremque magnam sit aspernatur distinctio sunt rem similique sed modi quisquam tempore neque quaerat consectetur quidem est culpa explicabo ratione beatae maxime? Quam ab, architecto neque sunt placeat, nemo deleniti dolor consectetur voluptatibus, obcaecati esse. Nesciunt accusantium corporis temporibus odio, sequi doloremque harum facilis nobis architecto laboriosam eaque praesentium maiores veritatis rerum dolore at minus debitis. Placeat architecto error, eaque excepturi ratione optio! Incidunt alias molestiae, temporibus illum non eum hic dignissimos iure magni voluptatum, obcaecati officiis voluptates consequuntur voluptas odio.</p>
+          <!--Cabañas-->
+          <a name="cabana"></a>
+          <section class="cabanas">
+            <h1 class="titulo">Cabañas</h1>
+            <p class="parrafo">Amplios hambientes que combina confort, buen gusto, diseño y calidad en cada detalle. Con equipamiento de alta gama y todos los servicios.</p>
+            <!--Iconos-->
+            <div class="iconos">
+              <div class="icono">
+                <img src="assets/hogar.png" alt="Cabañas">
+                <span><p>Dos Cabañas completamente Equipadas</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/humano.png" alt="Hasta 6 Personas">
+                <span><p>Capacidad: 6 Personas</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/reloj.png" alt="Check-in">
+                <span><p>Check-in: 11:00hs</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/reloj2.png" alt="Check-out">
+                <span><p>Check-out: 10:00hs</p></span>
+              </div>
+            </div>
+            <!--Galeria Cabañas-->
+            <div class="galeriaCabanas">
+              <div class="fotoCabanas">
+                <img src="assets/imagen1.jpeg" alt="Comedor">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen2.jpeg" alt="Comedor">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen3.jpeg" alt="Habitacion Inferior">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen4.jpeg" alt="Comedor">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen5.jpeg" alt="Habitacion Superior">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen6.jpeg" alt="Baño">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen7.jpeg" alt="Cocina">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen8.jpeg" alt="Asador">
+              </div>
+              <div class="fotoCabanas">
+                <img src="assets/imagen9.jpeg" alt="Garaje">
+              </div>
+            </div>
+            <!--Equipamiento y Servicios-->
+            <h3>Equipamiento y Sevicios</h3>
+            <!--Iconos-->
+            <div class="iconos">
+              <div class="icono">
+                <img src="assets/acondicionador-de-aire.png" alt="Aire Acondicionado">
+                <span><p>Aire Acondicionado</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/calefactor.png" alt="Calefactor a Gas">
+                <span><p>Calefactor a Gas</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/parrilla-de-ladrillo.png" alt="Parrilla">
+                <span><p>Parrilla</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/tamano-de-la-pantalla.png" alt="TV de 50 Pulgadas">
+                <span><p>TV de 50 Pulgadas</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/router-de-wifi.png" alt="WI-FI">
+                <span><p>WI-FI</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/garaje.png" alt="Cochera Cubierta">
+                <span><p>Cochera Cubierta</p></span>
+              </div>
+              <div class="icono">
+                <img src="assets/lago.png" alt="Acceso Gratuito al Lago">
+                <span><p>Acceso Gratuito al Lago</p></span>
+              </div>
+            </div>
+          </section>
+          <!--Reserva-->
+          <a name="reserva"></a>          
+          <section class="reserva">
+            <h1 class="titulo">Reservas</h1>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 col-sm-12">
+                  <!--Formulario de Reserva-->
+                  <form class="row formContact">
+                    <label class="mb-3 h3 text-sm-center text-md-center text-lg-center">Consulta por tu Reserva</label>
+                    <!--Fecha de Ingreso-->
+                    <div class="col-sm-12 col-lg-6 mb-3 text-start">
+                      <label for="text" class="form-label">Fecha de Ingreso</label>
+                      <input type="email" class="form-control text-start" id="Ingreso" placeholder="Formato Dia/Mes/Año">
+                    </div>
+                     <!--Fecha de Egreso-->
+                    <div class="col-sm-12 col-lg-6 mb-3 text-start">
+                      <label for="text" class="form-label">Fecha de Egreso</label>
+                      <input type="text" class="form-control text-start" id="Egreso" placeholder="Formato Dia/Mes/Año">
+                    </div>
+                     <!--Cantidad Mayores-->
+                    <div class="col-sm-12 col-lg-6 gl-3 mb-4 text-start">
+                      <label for="text" class="form-label">Adultos</label>
+                      <select class="form-select" aria-label="Default select example">
+                          <option selected>Cantidad de Adultos</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                      </select>
+                    </div>
+                     <!--Cantidad Menores-->
+                    <div class="col-sm-12 col-lg-6 gl-3 mb-4 text-start menores">
+                      <label for="text" class="form-label">Menores<span>(bebes y niños)</span></label>
+                      <select class="form-select" aria-label="Default select example">
+                          <option selected>Cantidad de Menores</option>
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5</option>
+                          <option value="6">6</option>
+                      </select>
+                    </div>
+                     <!--Nombre-->
+                     <div class="col-sm-12 col-lg-6 mb-3 text-start">
+                      <input type="text" class="form-control text-start" id="Nombre" placeholder="Nombre y Apellido">
+                    </div>
+                    <!--Email-->
+                    <div class="col-sm-12 col-lg-6 mb-3 text-start">
+                      <input type="email" class="form-control text-start" id="Nombre" placeholder="Email">
+                    </div>
+                    <!--Terminos y Condiciones-->
+                    <div class="col-sm-12 mt-3 text-start">
+                        <div class="form-check form-switch form-check-reverse mb-3 text-end">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
+                            <label class="form-check-label" for="flexSwitchCheckDefault">Acepto los terminos y condiciones.</label>
+                        </div>
+                    </div>
+                    <!--Buttons-->
+                    <div class="col-sm-12 mt-3 text-end">
+                        <button type="reset" class="btn btn-primary">Borrar</button>
+                        <button type="submit" class="btn btn-primary">Consultar Reserva</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                  <!--Mapa-->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d864378.6504170988!2d-65.20479586531427!3d-32.19131850000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95d299ba9501be0f%3A0xb631f68bebd7fac8!2sCaba%C3%B1as%20MAHALO!5e0!3m2!1ses-419!2sar!4v1657829300361!5m2!1ses-419!2sar" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Reviews-->
+          <section class="reviews">
+            <h1 class="titulo">Nuestros Clientes</h1>
+            <div class="google">
+              <script src="js/setings.js" defer></script>
+              <div class="elfsight-app-e96513ea-0cd5-4f5e-bb58-ab9cd3c2acf1"></div>
+            </div>
+          </section>
+          <!--Contacto-->
+          <a name="contacto"></a>
+          <section class="contacto">
+            <h1 class="titulo">Te Esperamos</h1>
+          </section>
         </main>
+        <!--Footer-->
+        <footer>
+          <div class="container-fluid footer">
+            <div class="row py-5 justify-content-center align-content-center">
+              <div class="col-sm-12 col-md-6 col-lg-3 logoFooter align-self-center">
+                <img class="aling-items-center" src="assets/logoMahaloTexto.png" alt="Mahalo">
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="ps-4">
+                  <p class="h5 mb-3">Villa Rumipal</p>
+                  <a href="https://www.villarumipal.com/" target="_blank" class="text-decoration-none text-black">Página Ofial</a>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <div class="ps-4">
+                  <p class="h5 mb-3">Links</p>
+                  <div class="mb-2">
+                    <a href="#home" class="text-decoration-none text-black">Home</a>
+                  </div>
+                  <div class="mb-2">
+                    <a href="#zonaTuristica" class="text-decoration-none text-black">Zona Turística</a>
+                  </div>
+                  <div class="mb-2">
+                    <a href="#cabana" class="text-decoration-none text-black">Cabañas</a>
+                  </div>
+                  <div class="mb-2">
+                    <a href="#reserva" class="text-decoration-none text-black">Reservas</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6 col-lg-3">
+                <p class="h5">Contacto</p>
+              </div>
+            </div>
+          </div>
 
-        
-
-
-
+        </footer>
+        <script src="./js/setings.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     </body>
 </html>

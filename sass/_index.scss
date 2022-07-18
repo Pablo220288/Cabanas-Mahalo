@@ -1,27 +1,287 @@
-.home{
-    position: relative;
-    nav{
-        position: absolute;
-        width: 100%;
-        top: 0;
-        z-index: 999;
-    }
-    .fondo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
+body{
+    background-color: $fondoBody;
+    .home{
         position: relative;
-        width: 100%;
-        height: 100vh;
-        overflow:hidden;
-        img{
+        nav{
             position: absolute;
             width: 100%;
-            height: 100%;
+            top: 0;
+            z-index: 999;
+        }
+        .fondo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow:hidden;
+            img{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+        .capa{
+            position: absolute;
             top: 0;
             left: 0;
-            object-fit: cover;
+            width: 100%;
+            height: 100vh;
+            background-color: $fondoNab;
+        }
+        .slogan{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            span{
+                font-family: Mahalo;
+                font-style: italic;
+                font-size: 10em;
+                color: $textWhite;
+                padding: 0 30px;
+    
+            }
+            .entranceSlogan{
+                -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                        animation: slide-in-fwd-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            }
+        }
+    }
+    .btn-wsp{
+        position:fixed;
+        width:60px;
+        height:60px;
+        line-height: 59px;
+        bottom:25px;
+        right:25px;
+        background:#25d366;
+        color:$textWhite;
+        border-radius:50px;
+        text-align:center;
+        vertical-align: middle;
+        font-size:35px;
+        box-shadow: 0px 1px 10px rgba(0,0,0,0.3);
+        z-index:100;
+        transition: all 300ms ease;
+        &:hover{
+            color:#25d366;
+            background: $textWhite
         }
     }
 
+    .bienvenido, .cabanas, .reserva, .zonaTuristica, .reviews, .contacto{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0;
+        .titulo{
+            font-family: Mahalo;
+            text-align: center;
+            font-size: 7em;
+            margin-top: 30px;
+        }
+        .parrafo{
+            text-align: center;
+            margin-top: 20px;
+            padding: 5px 150px;
+            font-weight: bold;
+        }
+    }
+        .zonaTuristica{
+        .parrafo{
+            margin-bottom: 25px;
+        }
+        .videos{
+            display: flex;
+            gap: 2em;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            iframe{
+                width: 540px;
+                height: 315px;
+            }
+        }
+        .postales{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 0 45px;
+            margin: 40px 0px 0px 0px;
+            width: 100%;
+            .postal{
+                width: 350px;
+                margin: 20px 10px;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 100%;
+                height: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    transition: all 500ms ease-out;
+                    &:hover{
+                        transform: scale(1.05);
+                        transition: all 500ms ease-out;
+                    }
+                }
+            }
+        }
+        .modal{
+            --bs-modal-width: 900px;
+            .modalPostales{
+                .carousel{
+                    position: relative;
+                }
+                .btn-close{
+                    position: absolute;
+                    top: 7%;
+                    right: 4%;
+                    z-index: 2;
+                    background: transparent url(../../assets/cerrar.png) center/1em auto no-repeat;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    .cabanas{
+        .parrafo{
+            margin-bottom: 10px;
+        }
+        .galeriaCabanas{
+            display: flex;
+            flex-direction: row;
+            justify-content:space-around;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+            padding: 0 45px;
+            margin: 0px;
+            width: 100%;
+            .fotoCabanas{
+                width: 350px;
+                margin: 20px 10px;
+                display: inline-block;
+                vertical-align: middle;
+                max-width: 100%;
+                height: auto;
+                transition: all 500ms ease-out;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border: 4px solid #fff;
+                }
+            } 
+        }
+        h3{
+            font-family: Mahalo;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 30px;
+        }
+        .iconos{
+        display: flex;
+        flex-direction: row;
+        justify-content:space-evenly;
+        align-items: center;
+        align-content: center;
+        flex-wrap: wrap;
+        padding: 0 20px;
+        margin: 50px 0px 0px 0px;
+        width: 100%;
+        gap: 20px;
+            .icono{
+                padding: 0 10px;
+                width: auto;
+                float: left;
+                position: relative;
+                width: 87px;
+                margin-top: 20px;
+                img{
+                    width: 50px;
+                    margin: 0 10px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    max-width: 100%;
+                    height: auto;
+                    transition: all 500ms ease-out;
+                }
+                span{
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    display: table;
+                    width: 250px;
+                    height: 30px;
+                    line-height: 1.1;
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: opacity ease-in-out .3s;
+                    font-size: 14px;
+                    p{
+                        padding-top: 8px;
+                        display: table-cell;
+                        vertical-align: middle;
+                        text-align: center;
+                        margin: 0 0 15px;
+                        overflow-wrap: break-word;
+                    }
+                }
+                &:hover span {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                
+                &:hover img {
+                    transform: scale(1.2);
+                    -webkit-filter: drop-shadow(0px 0px 1px #364775);
+                    filter:         drop-shadow(0px 0px 1px #364775); 
+                }
+            }
+        }
+    }
+    .reserva{
+        margin: 0px 20px 30px 20px;
+        .titulo{
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+        .menores{
+            span{padding-left: 8px;
+                font-size: 13px;
+            }
+        }
+    }
+    .reviews .google {
+        margin: 20px 60px;
+        .kPOGIE > a {
+            display: none !important;
+          }
+    }
+    .footer{
+        background: $fondoNab;
+        margin-top: 80px;
+        .logoFooter{
+            img{
+                width: 100%;
+            }
+        }
+    }
 }

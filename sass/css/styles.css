@@ -1,41 +1,28 @@
 /*Generales*/
+@import url("https://fonts.googleapis.com/css2?family=Rouge+Script&family=Updock&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.home {
-  position: relative;
+@font-face {
+  font-family: Mahalo;
+  src: url("../../font/ChristmasWish-Calligraphy.ttf") format("truetype");
 }
-.home nav {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  z-index: 999;
+.home .slogan .entranceSlogan:nth-child(1) {
+  animation-delay: 0.5s;
 }
-.home .fondo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.home .fondo img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+
+.home .slogan .entranceSlogan:nth-child(2) {
+  animation-delay: 1s;
 }
 
 /*Barra de Navegacion*/
 .bg-light {
   --bs-bg-opacity: 1;
-  background-color: rgba(0, 0, 0, 0.0862745098) !important;
+  background-color: rgba(0, 0, 0, 0.4078431373) !important;
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
@@ -48,8 +35,7 @@
 .navbar-nav .nav-link {
   color: #ffffff;
 }
-
-.sub a:before {
+.navbar-nav .sub a:before {
   content: "";
   position: absolute;
   background: #ffffff;
@@ -59,9 +45,353 @@
   left: 0;
   transition: all 300ms ease-out;
 }
-
-.sub a:hover:before {
+.navbar-nav .sub a:hover:before {
   width: 100%;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+body .home {
+  position: relative;
+}
+body .home nav {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+body .home .fondo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+body .home .fondo img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+body .home .capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4078431373);
+}
+body .home .slogan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+body .home .slogan span {
+  font-family: Mahalo;
+  font-style: italic;
+  font-size: 10em;
+  color: #ffffff;
+  padding: 0 30px;
+}
+body .home .slogan .entranceSlogan {
+  -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+body .btn-wsp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  line-height: 59px;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  transition: all 300ms ease;
+}
+body .btn-wsp:hover {
+  color: #25d366;
+  background: #ffffff;
+}
+body .bienvenido, body .cabanas, body .reserva, body .zonaTuristica, body .reviews, body .contacto {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
+  font-family: Mahalo;
+  text-align: center;
+  font-size: 7em;
+  margin-top: 30px;
+}
+body .bienvenido .parrafo, body .cabanas .parrafo, body .reserva .parrafo, body .zonaTuristica .parrafo, body .reviews .parrafo, body .contacto .parrafo {
+  text-align: center;
+  margin-top: 20px;
+  padding: 5px 150px;
+  font-weight: bold;
+}
+body .zonaTuristica .parrafo {
+  margin-bottom: 25px;
+}
+body .zonaTuristica .videos {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+body .zonaTuristica .videos iframe {
+  width: 540px;
+  height: 315px;
+}
+body .zonaTuristica .postales {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0 45px;
+  margin: 40px 0px 0px 0px;
+  width: 100%;
+}
+body .zonaTuristica .postales .postal {
+  width: 350px;
+  margin: 20px 10px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+}
+body .zonaTuristica .postales .postal img {
+  width: 100%;
+  height: 100%;
+  transition: all 500ms ease-out;
+}
+body .zonaTuristica .postales .postal img:hover {
+  transform: scale(1.05);
+  transition: all 500ms ease-out;
+}
+body .zonaTuristica .modal {
+  --bs-modal-width: 900px;
+}
+body .zonaTuristica .modal .modalPostales .carousel {
+  position: relative;
+}
+body .zonaTuristica .modal .modalPostales .btn-close {
+  position: absolute;
+  top: 7%;
+  right: 4%;
+  z-index: 2;
+  background: transparent url(../../assets/cerrar.png) center/1em auto no-repeat;
+  opacity: 0.8;
+}
+body .cabanas .parrafo {
+  margin-bottom: 10px;
+}
+body .cabanas .galeriaCabanas {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0 45px;
+  margin: 0px;
+  width: 100%;
+}
+body .cabanas .galeriaCabanas .fotoCabanas {
+  width: 350px;
+  margin: 20px 10px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  transition: all 500ms ease-out;
+}
+body .cabanas .galeriaCabanas .fotoCabanas img {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #fff;
+}
+body .cabanas h3 {
+  font-family: Mahalo;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 30px;
+}
+body .cabanas .iconos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 0 20px;
+  margin: 50px 0px 0px 0px;
+  width: 100%;
+  gap: 20px;
+}
+body .cabanas .iconos .icono {
+  padding: 0 10px;
+  width: auto;
+  float: left;
+  position: relative;
+  width: 87px;
+  margin-top: 20px;
+}
+body .cabanas .iconos .icono img {
+  width: 50px;
+  margin: 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  transition: all 500ms ease-out;
+}
+body .cabanas .iconos .icono span {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: table;
+  width: 250px;
+  height: 30px;
+  line-height: 1.1;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity ease-in-out 0.3s;
+  font-size: 14px;
+}
+body .cabanas .iconos .icono span p {
+  padding-top: 8px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  margin: 0 0 15px;
+  overflow-wrap: break-word;
+}
+body .cabanas .iconos .icono:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+body .cabanas .iconos .icono:hover img {
+  transform: scale(1.2);
+  -webkit-filter: drop-shadow(0px 0px 1px #364775);
+  filter: drop-shadow(0px 0px 1px #364775);
+}
+body .reserva {
+  margin: 0px 20px 30px 20px;
+}
+body .reserva .titulo {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+body .reserva .menores span {
+  padding-left: 8px;
+  font-size: 13px;
+}
+body .reviews .google {
+  margin: 20px 60px;
+}
+body .reviews .google .kPOGIE > a {
+  display: none !important;
+}
+body .footer {
+  background: rgba(0, 0, 0, 0.4078431373);
+  margin-top: 80px;
+}
+body .footer .logoFooter img {
+  width: 100%;
+}
+
+@-webkit-keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-fwd-center {
+  0% {
+    -webkit-transform: translateZ(-1400px);
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .home .slogan span {
+    font-size: 5em;
+  }
+  body .btn-wsp {
+    width: 40px;
+    height: 40px;
+    line-height: 32px;
+    bottom: 75px;
+    right: 55px;
+  }
+  body .btn-wsp i {
+    font-size: 27px;
+  }
+  body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
+    font-size: 4em;
+    margin-top: 10px;
+  }
+  body .bienvenido .parrafo, body .cabanas .parrafo, body .reserva .parrafo, body .zonaTuristica .parrafo, body .reviews .parrafo, body .contacto .parrafo {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  body .zonaTuristica .videos iframe {
+    width: 300px;
+    height: 300px;
+  }
+  body .zonaTuristica .postales {
+    padding: 0 5px;
+  }
+  body .cabanas .galeriaCabanas {
+    padding: 0 5px;
+  }
+  .reviews .google {
+    margin: 20px 40px;
+  }
+  .reviews .google .dmlKKH {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .reserva .row {
+    gap: 20px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
