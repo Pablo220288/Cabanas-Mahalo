@@ -52,6 +52,10 @@
 body {
   background-color: #f9f9f9;
 }
+body main {
+  padding: 0 !important;
+  overflow: hidden;
+}
 body .home {
   position: relative;
 }
@@ -109,6 +113,113 @@ body .home .slogan .entranceSlogan {
   -webkit-animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   animation: slide-in-fwd-center 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
+body .floatHome {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  bottom: 90px;
+  right: 36px;
+  background-color: transparent;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 100;
+}
+body .floatHome i {
+  color: #f9f9f9;
+  position: absolute;
+  transform: translate(-50%, -10%);
+  font-size: 25px;
+  animation-name: anim;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+body .floatHome p {
+  position: absolute;
+  transform: translate(-120%, 10%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  visibility: hidden;
+  height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 31px;
+  white-space: nowrap;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+}
+body .floatHome p:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: -6px;
+  border: 8px solid transparent;
+  border-width: 6px 0 6px 8px;
+  border-left-color: #fff;
+}
+body .floatHome:hover p {
+  transition: all 800ms ease-out;
+  visibility: visible;
+}
+body .float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #ffffff;
+  border-radius: 50px;
+  text-align: center;
+  z-index: 100;
+  -webkit-animation: slide-in-blurred-br 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation: slide-in-blurred-br 0.6s cubic-bezier(0.23, 1, 0.32, 1) both;
+  animation-delay: 1s;
+}
+body .float i {
+  position: absolute;
+  transform: translate(-50%, -10%);
+  font-size: 45px;
+}
+body .float p {
+  position: absolute;
+  transform: translate(-105%, 50%);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  visibility: hidden;
+  height: 32px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 16px;
+  background: #fff;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 31px;
+  white-space: nowrap;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.4));
+}
+body .float p:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: -6px;
+  border: 8px solid transparent;
+  border-width: 6px 0 6px 8px;
+  border-left-color: #fff;
+}
+body .float:hover {
+  background: #128c7e;
+  transition-duration: 1.5s;
+}
+body .float:hover p {
+  transition: all 800ms ease-out;
+  visibility: visible;
+}
+body .float .my-float {
+  margin-top: 13px;
+}
 body .bienvenido, body .cabanas, body .reserva, body .zonaTuristica, body .reviews, body .contacto {
   position: relative;
   display: flex;
@@ -144,6 +255,12 @@ body .zonaTuristica .videos iframe {
   width: 540px;
   height: 315px;
 }
+body .zonaTuristica h3 {
+  font-family: Mahalo;
+  text-align: center;
+  font-size: 4em;
+  margin-top: 30px;
+}
 body .zonaTuristica .postales {
   display: flex;
   flex-direction: row;
@@ -156,8 +273,8 @@ body .zonaTuristica .postales {
   width: 100%;
 }
 body .zonaTuristica .postales .postal {
-  width: 350px;
-  margin: 20px 10px;
+  width: 370px;
+  margin: 10px;
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
@@ -198,11 +315,12 @@ body .cabanas .galeriaCabanas {
   flex-wrap: wrap;
   padding: 0 45px;
   margin: 0px;
+  margin-top: 20px;
   width: 100%;
 }
 body .cabanas .galeriaCabanas .fotoCabanas {
-  width: 350px;
-  margin: 20px 10px;
+  width: 370px;
+  margin: 10px;
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
@@ -228,7 +346,7 @@ body .cabanas .iconos {
   align-content: center;
   flex-wrap: wrap;
   padding: 0 20px;
-  margin: 50px 0px 0px 0px;
+  margin: 30px 0px 0px 0px;
   width: 100%;
   gap: 20px;
 }
@@ -297,48 +415,53 @@ body .reviews .google .kPOGIE > a {
   display: none !important;
 }
 body .footer {
-  background: rgba(0, 0, 0, 0.4078431373);
+  background: #000000;
   margin-top: 80px;
 }
+body .footer .titulosFooter {
+  color: #ffffff;
+  font-size: 25px;
+}
 body .footer .logoFooter img {
-  width: 100%;
+  width: 80%;
+  margin-left: 10%;
 }
-
-.float {
-  position: fixed;
-  width: 60px;
-  height: 60px;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: #FFF;
-  border-radius: 50px;
-  text-align: center;
-  font-size: 35px;
-  z-index: 100;
-  transition: all 500ms ease-out;
+body .footer .contenLogos {
+  display: flex;
 }
-.float p {
-  position: absolute;
-  transform: translate(-110%, -130%);
-  font-size: 20px;
-  visibility: hidden;
-  color: black;
-  transition: all 500ms ease-out;
+body .footer .contenLogos .logoRedes {
+  height: 20px;
+  width: 20px;
 }
-
-.float:hover {
-  background-color: #fff;
-  transition: all 500ms ease-out;
-  color: #25d366;
+body .footer .contenLogos ul {
+  list-style: none;
 }
-.float:hover p {
-  transition: all 500ms ease-out;
-  visibility: visible;
+body .footer .contenLogos ul li {
+  padding: 5px 0px;
 }
-
-.my-float {
-  margin-top: 13px;
+body .footer .contenLogos ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+body .footer .contenLogos ul li a img {
+  height: 30px;
+  width: 30px;
+  margin-right: 15px;
+}
+body .footer .contenLogos ul li a p {
+  color: #ffffff;
+  margin-bottom: 0px;
+}
+body .footer .contenLogos ul li a i {
+  font-size: 25px;
+  margin-right: 15px;
+}
+body .footer .contenLogos .linksPage li {
+  padding: 0;
+}
+body .footer .contenLogos .linksPage li p {
+  margin-bottom: 0;
 }
 
 @-webkit-keyframes slide-in-fwd-center {
@@ -365,10 +488,64 @@ body .footer .logoFooter img {
     opacity: 1;
   }
 }
-@media screen and (max-width: 480px) {
-  body .home .slogan span {
-    font-size: 5em;
+@keyframes anim {
+  0% {
+    color: #f9f9f9;
   }
+  25% {
+    color: #000000;
+  }
+  50% {
+    color: #f9f9f9;
+  }
+  75% {
+    color: #000000;
+  }
+  100% {
+    color: #f9f9f9;
+  }
+}
+@-webkit-keyframes slide-in-blurred-br {
+  0% {
+    -webkit-transform: translate(1000px, 1000px) skew(80deg, 10deg);
+    transform: translate(1000px, 1000px) skew(80deg, 10deg);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+    transform: translate(0, 0) skew(0deg, 0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-blurred-br {
+  0% {
+    -webkit-transform: translate(1000px, 1000px) skew(80deg, 10deg);
+    transform: translate(1000px, 1000px) skew(80deg, 10deg);
+    -webkit-transform-origin: 0% 100%;
+    transform-origin: 0% 100%;
+    -webkit-filter: blur(40px);
+    filter: blur(40px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0, 0) skew(0deg, 0deg);
+    transform: translate(0, 0) skew(0deg, 0deg);
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-filter: blur(0);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+@media only screen and (min-width: 360px) and (max-width: 480px) {
   body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
     font-size: 4em;
     margin-top: 10px;
@@ -377,26 +554,118 @@ body .footer .logoFooter img {
     margin-top: 10px;
     padding: 5px 10px;
   }
+  body .home .slogan span {
+    font-size: 5em;
+  }
+  body .floatHome {
+    right: 19px;
+    bottom: 65px;
+  }
+  body .float {
+    width: 40px;
+    height: 40px;
+    bottom: 15px;
+    right: 15px;
+  }
+  body .float i {
+    transform: translate(-50%, -30%);
+    font-size: 30px;
+  }
+  body .float p {
+    transform: translate(-110%, 20%);
+  }
+  body .zonaTuristica .videos {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
   body .zonaTuristica .videos iframe {
-    width: 300px;
-    height: 300px;
+    width: 220px;
+    height: 220px;
+  }
+  body .zonaTuristica h3 {
+    font-size: 2.5em;
   }
   body .zonaTuristica .postales {
     padding: 0 5px;
+    margin: 20px 0px 0px 0px;
+  }
+  body .zonaTuristica .postales .postal {
+    width: 130px;
+    margin: 5px 5px;
   }
   body .cabanas .galeriaCabanas {
     padding: 0 5px;
   }
-  .reviews .google {
-    margin: 20px 40px !important;
+  body .cabanas .galeriaCabanas .fotoCabanas {
+    width: 130px;
+    margin: 0;
   }
-  .reviews .google .dmlKKH {
+  body .cabanas h3 {
+    font-size: 2.5em;
+  }
+  body .reserva .row {
+    gap: 20px;
+    margin: 0px 10px 30px 10px;
+  }
+  body .reserva .row iframe {
+    height: 320px;
+  }
+  body .reviews .titulo {
+    font-size: 3em;
+  }
+  body .reviews .google {
+    margin: 20px !important;
+  }
+  body .reviews .google .dmlKKH {
     flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 768px) {
-  .reserva .row {
-    gap: 20px;
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
+    font-size: 6em;
+    margin-top: 10px;
+  }
+  body .bienvenido .parrafo, body .cabanas .parrafo, body .reserva .parrafo, body .zonaTuristica .parrafo, body .reviews .parrafo, body .contacto .parrafo {
+    margin-top: 10px;
+    padding: 5px 10px;
+  }
+  body .home .slogan span {
+    font-size: 8em;
+  }
+  body .zonaTuristica .videos {
+    justify-content: space-evenly;
+    gap: 1rem;
+  }
+  body .zonaTuristica .videos iframe {
+    width: 350px;
+    height: 350px;
+  }
+  body .zonaTuristica h3 {
+    font-size: 3em;
+  }
+  body .zonaTuristica .postales {
+    padding: 0 5px;
+    margin: 20px 0px 0px 0px;
+  }
+  body .zonaTuristica .postales .postal {
+    width: 230px;
+    margin: 5px 5px;
+  }
+  body .cabanas .galeriaCabanas {
+    padding: 0 5px;
+  }
+  body .cabanas .galeriaCabanas .fotoCabanas {
+    width: 250px;
+    margin: 0;
+  }
+  body .cabanas h3 {
+    font-size: 3em;
+  }
+  body .reserva iframe {
+    height: 620px;
+  }
+  body .footer .logoFooter img {
+    margin-left: 5%;
   }
 }
 

@@ -1,5 +1,9 @@
 body{
     background-color: $fondoBody;
+    main{
+        padding: 0 !important;
+        overflow: hidden;
+    }
     .home{
         position: relative;
         nav{
@@ -58,7 +62,115 @@ body{
             }
         }
     }
-    
+    .floatHome{
+        position:fixed;
+        width:30px;
+        height:30px;
+        bottom:90px;
+        right:36px;
+        background-color: transparent;
+        border-radius:10px;
+        text-align:center;
+        z-index:100;
+        i{
+            color: $fondoBody;
+            position: absolute;
+            transform: translate(-50%, -10%);
+            font-size: 25px;
+            animation-name: anim;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+        }
+        p{
+            position: absolute;
+            transform: translate(-120%, 10%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            visibility: hidden;
+            height:32px;
+            padding:0 14px;
+            border:none;
+            border-radius:16px;
+            background:#fff;
+            color:rgb(0 0 0/80%);
+            line-height:31px;
+            white-space:nowrap;
+            filter:drop-shadow(0 1px 4px rgb(0 0 0 / 40%));
+        }
+        p:after{
+            content:"";
+            display:block;
+            position:absolute;
+            top:10px;
+            right:-6px;
+            border:8px solid transparent;
+            border-width:6px 0 6px 8px;
+            border-left-color:#fff
+        }
+        &:hover {
+            p{
+                transition: all 800ms ease-out;
+                visibility: visible;
+            }
+        }
+    }
+    .float{
+        position:fixed;
+        width:60px;
+        height:60px;
+        bottom:20px;
+        right:20px;
+        background-color:$fondoGreen;
+        color:$textWhite;
+        border-radius:50px;
+        text-align:center;
+        z-index:100;
+        -webkit-animation: slide-in-blurred-br 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation: slide-in-blurred-br 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+        animation-delay: 1s;
+        i{
+            position: absolute;
+            transform: translate(-50%, -10%);
+            font-size: 45px;
+        }
+        p{
+            position: absolute;
+            transform: translate(-105%, 50%);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 13px;
+            visibility: hidden;
+            height:32px;
+            padding:0 14px;
+            border:none;
+            border-radius:16px;
+            background:#fff;
+            color:rgb(0 0 0/80%);
+            line-height:31px;
+            white-space:nowrap;
+            filter:drop-shadow(0 1px 4px rgb(0 0 0 / 40%));
+        }
+        p:after{
+            content:"";
+            display:block;
+            position:absolute;
+            top:10px;
+            right:-6px;
+            border:8px solid transparent;
+            border-width:6px 0 6px 8px;
+            border-left-color:#fff
+        }
+        &:hover {
+            background:#128c7e;
+            transition-duration:1.5s;
+            p{
+                transition: all 800ms ease-out;
+                visibility: visible;
+            }
+        }
+        .my-float{
+            margin-top:13px;
+        }
+    }
     .bienvenido, .cabanas, .reserva, .zonaTuristica, .reviews, .contacto{
         position: relative;
         display: flex;
@@ -79,7 +191,7 @@ body{
             font-weight: bold;
         }
     }
-        .zonaTuristica{
+    .zonaTuristica{
         .parrafo{
             margin-bottom: 25px;
         }
@@ -95,6 +207,12 @@ body{
                 height: 315px;
             }
         }
+        h3{
+            font-family: Mahalo;
+            text-align: center;
+            font-size: 4em;
+            margin-top: 30px;
+        }
         .postales{
             display: flex;
             flex-direction: row;
@@ -106,8 +224,8 @@ body{
             margin: 40px 0px 0px 0px;
             width: 100%;
             .postal{
-                width: 350px;
-                margin: 20px 10px;
+                width: 370px;
+                margin: 10px;
                 display: inline-block;
                 vertical-align: middle;
                 max-width: 100%;
@@ -153,10 +271,11 @@ body{
             flex-wrap: wrap;
             padding: 0 45px;
             margin: 0px;
+            margin-top: 20px;
             width: 100%;
             .fotoCabanas{
-                width: 350px;
-                margin: 20px 10px;
+                width: 370px;
+                margin: 10px;
                 display: inline-block;
                 vertical-align: middle;
                 max-width: 100%;
@@ -183,7 +302,7 @@ body{
         align-content: center;
         flex-wrap: wrap;
         padding: 0 20px;
-        margin: 50px 0px 0px 0px;
+        margin: 30px 0px 0px 0px;
         width: 100%;
         gap: 20px;
             .icono{
@@ -255,47 +374,57 @@ body{
           }
     }
     .footer{
-        background: $fondoNab;
+        background: $fondoBlack;
         margin-top: 80px;
+        .titulosFooter{
+            color: $textWhite;
+            font-size: 25px;
+        }
         .logoFooter{
             img{
-                width: 100%;
+                width: 80%;
+                margin-left: 10%;
+            }
+        }
+        .contenLogos{
+            display: flex;
+            .logoRedes{
+                height: 20px;
+                width: 20px;
+            }
+            ul{
+                list-style: none;
+                li{
+                    padding: 5px 0px;
+                    a{
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+                        img{
+                            height: 30px;
+                            width: 30px;
+                            margin-right: 15px;               
+                        }
+                        p{
+                            color: $textWhite;
+                            margin-bottom: 0px;
+                        }
+                        i{
+                            font-size: 25px;
+                            margin-right: 15px;                               
+                        }
+                    }
+                }
+            }
+            .linksPage{
+                li{
+                    padding: 0;
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+
             }
         }
     }
-}
-.float{
-	position:fixed;
-	width:60px;
-	height:60px;
-	bottom:20px;
-	right:20px;
-	background-color:#25d366;
-	color:#FFF;
-	border-radius:50px;
-	text-align:center;
-    font-size:35px;
-    z-index:100;
-    transition: all 500ms ease-out;
-    p{
-        position: absolute;
-        transform: translate(-110%, -130%);
-        font-size: 20px;
-        visibility: hidden;
-        color: black;
-        transition: all 500ms ease-out;
-    }
-}
-.float:hover {
-    background-color: #fff;
-    transition: all 500ms ease-out;
-    color: #25d366;
-    p{
-        transition: all 500ms ease-out;
-        visibility: visible;
-    }
-}
-
-.my-float{
-	margin-top:13px;
 }
