@@ -11,6 +11,10 @@
   font-family: Mahalo;
   src: url("../../font/ChristmasWish-Calligraphy.ttf") format("truetype");
 }
+@font-face {
+  font-family: Pablo;
+  src: url("../../font/TheScientist-L3EyW.ttf") format("truetype");
+}
 .home .slogan .entranceSlogan:nth-child(1) {
   animation-delay: 0.5s;
 }
@@ -117,8 +121,8 @@ body .floatHome {
   position: fixed;
   width: 30px;
   height: 30px;
-  bottom: 90px;
-  right: 36px;
+  bottom: 70px;
+  right: 25px;
   background-color: transparent;
   border-radius: 10px;
   text-align: center;
@@ -165,8 +169,8 @@ body .floatHome:hover p {
 }
 body .float {
   position: fixed;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   bottom: 20px;
   right: 20px;
   background-color: #25d366;
@@ -180,12 +184,12 @@ body .float {
 }
 body .float i {
   position: absolute;
-  transform: translate(-50%, -10%);
-  font-size: 45px;
+  transform: translate(-50%, -22%);
+  font-size: 25px;
 }
 body .float p {
   position: absolute;
-  transform: translate(-105%, 50%);
+  transform: translate(-105%, 20%);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 13px;
   visibility: hidden;
@@ -464,6 +468,24 @@ body .footer .contenLogos .linksPage li {
 body .footer .contenLogos .linksPage li p {
   margin-bottom: 0;
 }
+body .footer .line {
+  border: 1px solid #ffffff;
+  width: 90%;
+}
+body .footer .copy {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+}
+body .footer .copy .footerDis .pablo {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: Pablo;
+  margin-right: 30px;
+  font-size: 1.5rem;
+}
 
 @-webkit-keyframes slide-in-fwd-center {
   0% {
@@ -565,7 +587,7 @@ body .footer .contenLogos .linksPage li p {
     font-size: 7em;
   }
 }
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 200px) and (max-width: 768px) {
   body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
     font-size: 6em;
     margin-top: 10px;
@@ -590,6 +612,11 @@ body .footer .contenLogos .linksPage li p {
   }
   body .cabanas .galeriaCabanas .fotoCabanas {
     width: 95%;
+  }
+  body .cabanas .iconos .icono span {
+    width: 100px;
+    visibility: visible;
+    opacity: 1;
   }
   body .reserva .row {
     gap: 20px;

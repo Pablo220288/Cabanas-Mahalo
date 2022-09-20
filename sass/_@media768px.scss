@@ -1,4 +1,4 @@
-@media only screen and (min-width: 320px) and (max-width: 768px) {
+@media only screen and (min-width: 200px) and (max-width: 768px) {
     body .bienvenido .titulo, body .cabanas .titulo, body .reserva .titulo, body .zonaTuristica .titulo, body .reviews .titulo, body .contacto .titulo {
         font-size: 6em;
         margin-top: 10px;
@@ -30,6 +30,15 @@
             .galeriaCabanas {
                 .fotoCabanas {
                     width: 95%;
+                }
+            }
+            .iconos{
+                .icono{
+                    span{
+                        width: 100px;
+                        visibility:visible;
+                        opacity: 1;
+                    }
                 }
             }
         }
